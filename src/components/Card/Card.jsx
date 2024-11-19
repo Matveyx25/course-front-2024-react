@@ -5,11 +5,11 @@ export const Card = ({data}) => {
     return(
         <div className={s.wrapper}>
             <div className={s.imgWrap}>
-                <img src={'./img/avatar.png'} alt="" />
+                <img src={data.image} alt="" />
             </div>
             <div className={s.content}>
                 <span>
-                    <h1 className={s.name}>{data.name + data.id}</h1>
+                    <h1 className={s.name}>{data.name}</h1>
                     <p className={s.status}>
                         <span>{data.status}</span>
                     </p>
