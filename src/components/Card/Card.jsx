@@ -1,9 +1,10 @@
 import React from 'react';
 import s from './Card.module.scss'
+import { NavLink } from 'react-router-dom';
 
 export const Card = ({data}) => {
     return(
-        <div className={s.wrapper}>
+        <NavLink className={s.wrapper} to={'/character/' + data.id}>
             <div className={s.imgWrap}>
                 <img src={data.image} alt="" />
             </div>
@@ -23,6 +24,6 @@ export const Card = ({data}) => {
                     <p>{data.episode[0].split('/').pop()}</p>
                 </p>
             </div>
-        </div>
+        </NavLink>
     )
 }
