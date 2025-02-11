@@ -6,9 +6,12 @@ const instance = axios.create({
 
 export const characters = {
 	getAllCharacters(params) {
-		return instance.get('/character', {params: params})
+		return instance.get('/character', {params})
 	},
 	getCharacterById(id) {
 		return instance.get('/character/' + id)
+	},
+	getLocationById(id) {
+		return instance.get(`/location/${id}`)
 	}
 }

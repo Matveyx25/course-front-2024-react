@@ -17,7 +17,7 @@ export const Card = ({data}) => {
                 </span>
                 <p className={s.location}>
                     <span>Last known location:</span>
-                    <p>{data.location.name}</p>
+                    <NavLink to={"/location/" + data.location.url.split('/').pop()}>{data.location.name}</NavLink>
                 </p>
                 <p className={s.episode}>
                     <span>Fist seen in:</span>
